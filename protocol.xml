@@ -496,7 +496,7 @@
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
-				<DefaultValue>600</DefaultValue>
+				<DefaultValue></DefaultValue>
 				<Decimals>3</Decimals>
 				<LengthType>next param</LengthType>
 				<Exceptions>
@@ -533,7 +533,7 @@
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="-1">
@@ -630,7 +630,7 @@
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
-				<DefaultValue>64</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="-1">
@@ -665,7 +665,7 @@
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
-				<DefaultValue>64</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="-1">
