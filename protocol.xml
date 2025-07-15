@@ -187,6 +187,12 @@
 				<Type>double</Type>
 				<DefaultValue>1</DefaultValue>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -490,7 +496,7 @@
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
-				<DefaultValue>500</DefaultValue>
+				<DefaultValue>600</DefaultValue>
 				<Decimals>3</Decimals>
 				<LengthType>next param</LengthType>
 				<Exceptions>
@@ -529,6 +535,12 @@
 				<Type>double</Type>
 				<DefaultValue>0</DefaultValue>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -620,6 +632,12 @@
 				<Type>double</Type>
 				<DefaultValue>64</DefaultValue>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -649,6 +667,12 @@
 				<Type>double</Type>
 				<DefaultValue>64</DefaultValue>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -753,15 +777,16 @@
 			<Name>fixedOne</Name>
 			<Type>fixed</Type>
 			<Interprete>
-				<LengthType>next param</LengthType>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<Value>1</Value>
+				<LengthType>fixed</LengthType>
+				<Length>1</Length>
 			</Interprete>
 		</Param>
 		<Param id="34">
 			<Name>fixedZero</Name>
-			<Type>fixed</Type>
+			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
@@ -793,8 +818,7 @@
 				<Action>14</Action>
 				<Action>16</Action>
 				<Action>18</Action>
-				<Action>40</Action>
-				<Action>42</Action>
+				<!--<Action>41</Action>-->
 				<Action>50</Action>
 			</Content>
 		</Group>
@@ -803,7 +827,6 @@
 			<Type>action</Type>
 			<Content>
 				<Action>60</Action>
-				<Action>41</Action>
 			</Content>
 		</Group>
 		<Group id="5">
@@ -814,8 +837,7 @@
 				<Action>24</Action>
 				<Action>26</Action>
 				<Action>28</Action>
-				<Action>43</Action>
-				<Action>44</Action>
+				<!--<Action>42</Action>-->
 				<Action>61</Action>
 			</Content>
 		</Group>
@@ -824,7 +846,7 @@
 			<Type>action</Type>
 			<Content>
 				<Action>50</Action>
-				<Action>45</Action>
+				<Action>40</Action>
 			</Content>
 		</Group>
 	</Groups>
@@ -835,7 +857,7 @@
 			<On id="60">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
-			<Condition><![CDATA[id:60 == 1]]></Condition>
+			<Condition><![CDATA[id:10 == 0]]></Condition>
 			<Content>
 				<Id>3</Id>
 				<Id else="true">4</Id>
@@ -846,13 +868,25 @@
 			<On id="70">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
-			<Condition><![CDATA[id:70 == 1]]></Condition>
+			<Condition><![CDATA[id:20 == 0]]></Condition>
 			<Content>
 				<Id>5</Id>
 				<Id else="true">6</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="102">
+			<Name>Auto Chroma Weight Toggle</Name>
+			<On id="64">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Condition><![CDATA[id:14 == 0]]></Condition>
+			<Content>
+				<Id>71</Id>
+				<Id else="true">70</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
+
 
 	<Actions>
 		<Action id="2">
@@ -861,7 +895,7 @@
 			<Type>run actions</Type>
 		</Action>
 		<Action id="3">
-			<Name>Encoder Toggle Group</Name>
+			<Name>Encoder On Group</Name>
 			<On id="3">group</On>
 			<Type>execute next</Type>
 		</Action>
@@ -880,7 +914,6 @@
 			<On id="6">group</On>
 			<Type>execute next</Type>
 		</Action>
-
 		<Action id="12">
 			<Name>Restore Encoder Bitrate</Name>
 			<On id="13">parameter</On>
@@ -922,34 +955,24 @@
 			<Type id="32">copy</Type>
 		</Action>
 		<Action id="40">
-			<Name>Set EncoderStatus 1</Name>
+			<Name>Set Encoder On</Name>
 			<On id="10">parameter</On>
 			<Type id="33">copy</Type>
 		</Action>
 		<Action id="41">
-			<Name>Set EncoderStatus 0</Name>
+			<Name>Set Encoder Off</Name>
 			<On id="10">parameter</On>
 			<Type id="34">copy</Type>
 		</Action>
 		<Action id="42">
-			<Name>Set DecoderStatus 0 (from encoder)</Name>
+			<Name>Set Decoder Off</Name>
 			<On id="20">parameter</On>
 			<Type id="34">copy</Type>
 		</Action>
 		<Action id="43">
-			<Name>Set DecoderStatus 1</Name>
+			<Name>Set Decoder On</Name>
 			<On id="20">parameter</On>
 			<Type id="33">copy</Type>
-		</Action>
-		<Action id="44">
-			<Name>Set EncoderStatus 0 (from decoder)</Name>
-			<On id="10">parameter</On>
-			<Type id="34">copy</Type>
-		</Action>
-		<Action id="45">
-			<Name>Set DecoderStatus 0</Name>
-			<On id="20">parameter</On>
-			<Type id="34">copy</Type>
 		</Action>
 		<Action id="50">
 			<Name>Decoder Bars NotAvailable</Name>
@@ -966,6 +989,17 @@
 			<On id="13;14;15;16">parameter</On>
 			<Type id="5">copy</Type>
 		</Action>
+		<Action id="70">
+			<Name>Set Chroma Weight Not Available</Name>
+			<On id="15">parameter</On>
+			<Type id="5">copy</Type>
+		</Action>
+		<Action id="71">
+			<Name>Restore Chroma Weight from Dummy</Name>
+			<On id="15">parameter</On>
+			<Type id="27">copy</Type>
+		</Action>
+
 	</Actions>
 
 	<Timers>
@@ -1001,7 +1035,7 @@
 									<MinorVersion id="1">
 										<Date>2024-01-08</Date>
 										<Provider>
-											<Author>XXX</Author>
+											<Author>DZL</Author>
 											<Company>Skyline Communications</Company>
 										</Provider>
 										<Changes>
@@ -1017,3 +1051,4 @@
 		</Branches>
 	</VersionHistory>
 </Protocol>
+
