@@ -232,10 +232,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Encodercurrentcompressedbitrate_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encodercurrentcompressedbitrate {get { return GetParameter(13); }set { SetParameter(13, value); }}
-	/// <summary>PID: 14  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	/// <summary>PID: 14  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderautochromaweight_14 {get { return GetParameter(14); }set { SetParameter(14, value); }}
-	/// <summary>PID: 14  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	/// <summary>PID: 14  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderautochromaweight {get { return GetParameter(14); }set { SetParameter(14, value); }}
 	/// <summary>PID: 15  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -261,20 +261,20 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decodercurrentcompressedbitrate_21 {get { return GetParameter(21); }set { SetParameter(21, value); }}
 	/// <summary>PID: 21  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Decodercurrentcompressedbitrate {get { return GetParameter(21); }set { SetParameter(21, value); }}
-	/// <summary>PID: 22  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
+	/// <summary>PID: 22  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Progressionorder_22 {get { return GetParameter(22); }set { SetParameter(22, value); }}
-	/// <summary>PID: 22  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
+	/// <summary>PID: 22  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Progressionorder {get { return GetParameter(22); }set { SetParameter(22, value); }}
-	/// <summary>PID: 23  | Type: read</summary>
+	/// <summary>PID: 23  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Codeblockwidth_23 {get { return GetParameter(23); }set { SetParameter(23, value); }}
-	/// <summary>PID: 23  | Type: read</summary>
+	/// <summary>PID: 23  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Codeblockwidth {get { return GetParameter(23); }set { SetParameter(23, value); }}
-	/// <summary>PID: 24  | Type: read</summary>
+	/// <summary>PID: 24  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Codeblockheight_24 {get { return GetParameter(24); }set { SetParameter(24, value); }}
-	/// <summary>PID: 24  | Type: read</summary>
+	/// <summary>PID: 24  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Codeblockheight {get { return GetParameter(24); }set { SetParameter(24, value); }}
 	/// <summary>PID: 25  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
