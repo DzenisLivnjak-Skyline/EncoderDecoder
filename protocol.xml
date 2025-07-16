@@ -496,7 +496,7 @@
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
-				<DefaultValue></DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Decimals>3</Decimals>
 				<LengthType>next param</LengthType>
 				<Exceptions>
@@ -818,7 +818,7 @@
 				<Action>14</Action>
 				<Action>16</Action>
 				<Action>18</Action>
-				<!--<Action>41</Action>-->
+				<Action>42</Action>
 				<Action>50</Action>
 			</Content>
 		</Group>
@@ -837,8 +837,8 @@
 				<Action>24</Action>
 				<Action>26</Action>
 				<Action>28</Action>
-				<!--<Action>42</Action>-->
-				<Action>61</Action>
+				<Action>41</Action>
+				<Action>60</Action>
 			</Content>
 		</Group>
 		<Group id="6">
@@ -846,7 +846,7 @@
 			<Type>action</Type>
 			<Content>
 				<Action>50</Action>
-				<Action>40</Action>
+				<!--<Action>40</Action>-->
 			</Content>
 		</Group>
 	</Groups>
@@ -981,11 +981,6 @@
 		</Action>
 		<Action id="60">
 			<Name>Encoder Bars NotAvailable</Name>
-			<On id="13;14;15;16">parameter</On>
-			<Type id="5">copy</Type>
-		</Action>
-		<Action id="61">
-			<Name>Encoder Bars NotAvailable (from decoder)</Name>
 			<On id="13;14;15;16">parameter</On>
 			<Type id="5">copy</Type>
 		</Action>
